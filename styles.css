@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+}
+
+td input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.block {
+    background-color: #ffffff;
+}
+
+#content {
+    padding-bottom: 40px;
+}
+
+.title-content {
+    font-size: 20px;
+    color: #488700;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.d-grid {
+    text-align: center;
+}
+
+#toggle,
+#toggleHide,
+#toggleRestart,
+#darkModeToggle {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #488700;
+    border-color: #488700;
+}
+
+#toggle:hover,
+#toggleHide:hover,
+#toggleRestart:hover,
+#darkModeToggle:hover {
+    background-color: #73d502;
+}
+
+.question-button {
+    background-color: #488700;
+    font-size: 15px;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.question-button:hover {
+    background-color: #73d502;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode table {
+    background-color: #000000;
+}
+
+body.dark-mode td input {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .block {
+    background-color: #000000;
+}
+
+body.dark-mode #toggle,
+body.dark-mode #toggleHide,
+body.dark-mode #toggleRestart,
+body.dark-mode #darkModeToggle {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #333333;
+}
+
+body.dark-mode .question-button:hover {
+    background-color: #555555;
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    .d-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .question-button {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    td {
+        width: 30px;
+        height: 30px;
+    }
+
+    td input {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.notification.correct {
+    background-color: #4CAF50;
+    animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 2s;
+}
+
+.notification.incorrect {
+    background-color: #F44336;
+    animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 2s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
