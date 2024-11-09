@@ -1,1 +1,1 @@
-[Hasil] (https://tugas-uts.septianhadinugroho.com/)
+[Hasil](https://tugas-uts.septianhadinugroho.com/)
